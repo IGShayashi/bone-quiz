@@ -490,8 +490,15 @@ function showPanel(id) {
 }
 function startQuiz() {
   const data = SAMPLE;
-  const pool = selectedCat==='すべての領域' ? data : data.filter(d=>d.cat===selectedCat);
-  questions = shuffle(pool).slice(0,Math.min(10,pool.length));
+  if (selectedCat === 'すべての領域') {
+    // 各カテゴリからランダムに2問ずつ、合計10問
+    const cats = ['上肢','下肢','脊柱','頭蓋骨','手根・足根骨'];
+    questions = cats.flatMap(c => shuffle(data.filter(d=>d.cat===c)).slice(0,2));
+    questions = shuffle(questions);
+  } else {
+    const pool = data.filter(d=>d.cat===selectedCat);
+    questions = shuffle(pool).slice(0,Math.min(10,pool.length));
+  }
   idx=0; cCount=0; wCount=0; answers=[];
   showPanel('panel-quiz');
   renderQuestion();
