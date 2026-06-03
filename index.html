@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>骨格クイズ｜解剖学トレーニング</title>
-
+ 
 <style>
 :root {
   --bg: #0c1018;
@@ -28,14 +28,14 @@ body {
   color: var(--text);
   min-height: 100vh; min-height: -webkit-fill-available;
 }
-
-
+ 
+ 
 .wrap {
   position:relative;
   max-width:680px; margin:0 auto;
   padding:24px 16px 80px;
 }
-
+ 
 /* HEADER */
 header { text-align:center; padding:36px 0 28px; }
 .eyebrow {
@@ -50,7 +50,7 @@ h1 {
 }
 h1 em { color:var(--accent); font-style:normal; }
 .tagline { font-size:13px; color:var(--muted); margin-top:8px; letter-spacing:.04em; }
-
+ 
 /* PANELS */
 .panel { display:none; }
 .panel.active { display:block; -webkit-animation:fadeUp .4s ease; animation:fadeUp .4s ease; }
@@ -61,7 +61,7 @@ h1 em { color:var(--accent); font-style:normal; }
   from { opacity:0; transform:translateY(18px); }
   to   { opacity:1; transform:translateY(0); }
 }
-
+ 
 /* START SCREEN */
 .bone-icon {
   font-size:68px; display:block; text-align:center;
@@ -85,7 +85,7 @@ h1 em { color:var(--accent); font-style:normal; }
   text-align:center;
 }
 .desc-box strong { color:var(--accent); }
-
+ 
 .cat-label {
   font-size:11px; letter-spacing:.14em; color:var(--muted);
   text-transform:uppercase; margin-bottom:12px; text-align:center;
@@ -109,7 +109,7 @@ h1 em { color:var(--accent); font-style:normal; }
 .cat-icon { font-size:22px; display:block; margin-bottom:5px; }
 .cat-name { font-size:12px; color:var(--text); font-weight:500; }
 .cat-count { font-size:10px; color:var(--muted); margin-top:2px; }
-
+ 
 .upload-zone {
   border:2px dashed var(--border);
   border-radius:12px; padding:18px;
@@ -123,7 +123,7 @@ h1 em { color:var(--accent); font-style:normal; }
 .upload-txt { font-size:12px; color:var(--muted); }
 .upload-txt strong { color:var(--accent2); }
 .divider { text-align:center; font-size:11px; color:var(--muted); margin:10px 0 14px; }
-
+ 
 /* BUTTONS */
 .btn {
   display:flex; align-items:center; justify-content:center;
@@ -150,7 +150,7 @@ h1 em { color:var(--accent); font-style:normal; }
   color:var(--muted); font-size:13px; padding:10px;
 }
 .btn-ghost:hover { border-color:var(--accent2); color:var(--accent2); }
-
+ 
 /* JUDGE BUTTONS */
 .btn-pair {
   display:grid; grid-template-columns:1fr 1fr;
@@ -178,7 +178,7 @@ h1 em { color:var(--accent); font-style:normal; }
 .btn-judge-w:hover { background:rgba(245,101,101,.2); border-color:var(--wrong); transform:translateY(-2px); }
 .btn-judge-icon { font-size:28px; }
 .btn-judge-sub { font-size:11px; opacity:.75; font-weight:400; }
-
+ 
 /* HUD */
 .hud {
   display:flex; align-items:center; justify-content:space-between;
@@ -192,7 +192,7 @@ h1 em { color:var(--accent); font-style:normal; }
 .hud-num.n { color:var(--accent); }
 .hud-lbl { font-size:10px; color:var(--muted); letter-spacing:.1em; text-transform:uppercase; margin-top:2px; }
 .hud-sep { width:1px; height:36px; background:var(--border); }
-
+ 
 .prog-wrap {
   height:6px; background:var(--surface);
   border:1px solid var(--border);
@@ -203,7 +203,7 @@ h1 em { color:var(--accent); font-style:normal; }
   background:linear-gradient(90deg,var(--accent2),var(--accent));
   border-radius:6px; transition:width .4s ease; width:0%;
 }
-
+ 
 /* QUIZ CARD */
 .qcard {
   background:var(--card); border:1px solid var(--border2);
@@ -235,14 +235,14 @@ h1 em { color:var(--accent); font-style:normal; }
   font-size:clamp(28px,6vw,42px); font-weight:900;
   color:var(--bone); letter-spacing:.02em; line-height:1.2; margin-bottom:8px;
 }
-
+ 
 .hint-box {
   background:var(--bg); border:1px dashed var(--border);
   border-radius:10px; padding:13px 16px;
   font-size:12px; color:var(--muted);
   text-align:center; letter-spacing:.05em;
 }
-
+ 
 /* ANSWER REVEAL */
 .answer-reveal-wrap { margin-top:20px; }
 .ans-lbl { font-size:12px; color:var(--muted); letter-spacing:.05em; margin-bottom:6px; }
@@ -252,7 +252,7 @@ h1 em { color:var(--accent); font-style:normal; }
   display:flex; align-items:center; gap:10px;
 }
 .ans-bone { color:var(--accent); font-size:20px; font-weight:700; }
-
+ 
 /* FEEDBACK */
 .feedback-banner {
   display:none; align-items:center; gap:12px;
@@ -275,7 +275,7 @@ h1 em { color:var(--accent); font-style:normal; }
 }
 .fb-icon { font-size:22px; }
 .fb-sub { font-size:12px; color:var(--muted); font-weight:400; margin-top:3px; }
-
+ 
 /* RESULT */
 .result-hero { text-align:center; padding:20px 0 8px; }
 .result-emoji {
@@ -310,37 +310,60 @@ h1 em { color:var(--accent); font-style:normal; }
 .rr-q { color:var(--muted); font-size:12px; }
 .rr-a { color:var(--text); font-weight:700; margin-top:2px; }
 .result-btns { display:flex; flex-direction:column; gap:10px; }
+ 
+/* 問題数選択 */
+.num-label {
+  font-size:11px; letter-spacing:.14em; color:var(--muted);
+  text-transform:uppercase; margin-bottom:12px; text-align:center;
+}
+.num-grid {
+  display:grid; grid-template-columns:repeat(5,1fr);
+  gap:8px; margin-bottom:28px;
+}
+.num-btn {
+  background:var(--surface);
+  border:2px solid var(--border);
+  border-radius:12px;
+  padding:14px 4px;
+  cursor:pointer; transition:all .2s;
+  text-align:center;
+  font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo',sans-serif;
+}
+.num-btn:hover { border-color:var(--accent2); background:rgba(79,142,247,.07); }
+.num-btn.selected { border-color:var(--accent); background:rgba(212,168,75,.1); }
+.num-val { font-size:20px; font-weight:700; color:var(--accent); display:block; }
+.num-unit { font-size:10px; color:var(--muted); margin-top:2px; }
 </style>
 </head>
 <body>
 <div class="wrap">
-
+ 
 <header>
   <div class="eyebrow">Anatomy Training</div>
   <h1>骨格<em>クイズ</em></h1>
   <p class="tagline">解剖学 — 骨の部位マスタートレーニング</p>
 </header>
-
+ 
 <!-- ══ START ══ -->
 <div class="panel active" id="panel-start">
   <span class="bone-icon">🦴</span>
-
+ 
   <div class="desc-box">
     表示された骨の部位名を見て、<strong>骨模型を使って</strong>その部位を当ててみよう。<br>
-    ランダムに <strong>10問</strong> 出題されます。頑張ってみよう！
+    領域と問題数を選んで、頑張ってみよう！
   </div>
-
-  <div class="cat-label">📂 出題カテゴリを選んでください</div>
+ 
+  <div class="cat-label">① 出題カテゴリを選んでください</div>
   <div class="cat-grid" id="cat-grid"></div>
-
+ 
+  <div class="num-label">② 問題数を選んでください</div>
+  <div class="num-grid" id="num-grid"></div>
+ 
   <button class="btn btn-primary" id="start-btn" onclick="startQuiz()">
     🦴 クイズを始める
   </button>
-  <p style="font-size:11px;color:var(--muted);text-align:center;margin-top:10px;">
-    ファイル未アップロードの場合はサンプルデータを使用します
-  </p>
 </div>
-
+ 
 <!-- ══ QUIZ ══ -->
 <div class="panel" id="panel-quiz">
   <div class="hud">
@@ -353,7 +376,7 @@ h1 em { color:var(--accent); font-style:normal; }
     <div class="hud-item"><div class="hud-num" id="hud-r" style="color:var(--muted)">10</div><div class="hud-lbl">残り</div></div>
   </div>
   <div class="prog-wrap"><div class="prog-fill" id="prog-fill"></div></div>
-
+ 
   <div class="qcard" id="qcard">
     <div class="q-meta">
       <span class="q-num-lbl" id="q-num-lbl">Q 01 / 10</span>
@@ -361,7 +384,7 @@ h1 em { color:var(--accent); font-style:normal; }
     </div>
     <div class="q-instruction">この部位はどこでしょう？</div>
     <div class="q-part" id="q-part">—</div>
-
+ 
     <!-- Phase 1: judge -->
     <div id="phase-judge">
       <div style="margin-top:16px;">
@@ -380,7 +403,7 @@ h1 em { color:var(--accent); font-style:normal; }
         </button>
       </div>
     </div>
-
+ 
     <!-- Phase 2: answer + feedback -->
     <div id="phase-feedback" style="display:none;">
       <div class="answer-reveal-wrap">
@@ -390,7 +413,7 @@ h1 em { color:var(--accent); font-style:normal; }
           <span class="ans-bone" id="ans-bone">—</span>
         </div>
       </div>
-
+ 
       <div class="feedback-banner" id="feedback-banner">
         <span class="fb-icon" id="fb-icon"></span>
         <div>
@@ -398,18 +421,18 @@ h1 em { color:var(--accent); font-style:normal; }
           <div class="fb-sub" id="fb-sub"></div>
         </div>
       </div>
-
+ 
       <div style="margin-top:18px;">
         <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()">次の問題 →</button>
       </div>
     </div>
   </div>
-
+ 
   <button class="btn btn-ghost" onclick="if(confirm('クイズを終了してトップに戻りますか？'))resetAll()" style="margin-top:12px;font-size:12px;">
     ✕ 終了する
   </button>
 </div>
-
+ 
 <!-- ══ RESULT ══ -->
 <div class="panel" id="panel-result">
   <div class="result-hero">
@@ -419,30 +442,31 @@ h1 em { color:var(--accent); font-style:normal; }
     <div class="result-denom" id="res-denom">/ 10 問正解</div>
     <p class="result-msg" id="res-msg"></p>
   </div>
-
+ 
   <div class="review-box">
     <div class="review-head">📋 解答一覧</div>
     <div id="review-rows"></div>
   </div>
-
+ 
   <div class="result-btns">
     <button class="btn btn-gold" onclick="startQuiz()">🔄 同じカテゴリでもう一度</button>
     <button class="btn btn-ghost" onclick="resetAll()">🏠 カテゴリ選択に戻る</button>
   </div>
 </div>
-
+ 
 </div>
-
+ 
 <script>
 // ── QUIZ DATA（解剖学_骨学口頭試問_一覧.xlsx より）──
 const SAMPLE = [{"part": "内側縁", "bone": "肩甲骨", "cat": "上肢"}, {"part": "下角", "bone": "肩甲骨", "cat": "上肢"}, {"part": "外側角", "bone": "肩甲骨", "cat": "上肢"}, {"part": "肩峰", "bone": "肩甲骨", "cat": "上肢"}, {"part": "肩甲棘", "bone": "肩甲骨", "cat": "上肢"}, {"part": "棘上窩", "bone": "肩甲骨", "cat": "上肢"}, {"part": "棘下窩", "bone": "肩甲骨", "cat": "上肢"}, {"part": "肩甲下窩", "bone": "肩甲骨", "cat": "上肢"}, {"part": "関節窩", "bone": "肩甲骨", "cat": "上肢"}, {"part": "関節上結節", "bone": "肩甲骨", "cat": "上肢"}, {"part": "関節下結節", "bone": "肩甲骨", "cat": "上肢"}, {"part": "烏口突起", "bone": "肩甲骨", "cat": "上肢"}, {"part": "肩甲切痕", "bone": "肩甲骨", "cat": "上肢"}, {"part": "胸骨端", "bone": "鎖骨", "cat": "上肢"}, {"part": "肩峰端", "bone": "鎖骨", "cat": "上肢"}, {"part": "胸骨関節面", "bone": "鎖骨", "cat": "上肢"}, {"part": "上腕骨頭", "bone": "上腕骨", "cat": "上肢"}, {"part": "解剖頸", "bone": "上腕骨", "cat": "上肢"}, {"part": "大結節", "bone": "上腕骨", "cat": "上肢"}, {"part": "小結節", "bone": "上腕骨", "cat": "上肢"}, {"part": "結節間溝", "bone": "上腕骨", "cat": "上肢"}, {"part": "小結節稜", "bone": "上腕骨", "cat": "上肢"}, {"part": "大結節稜", "bone": "上腕骨", "cat": "上肢"}, {"part": "外科頚", "bone": "上腕骨", "cat": "上肢"}, {"part": "三角筋粗面", "bone": "上腕骨", "cat": "上肢"}, {"part": "橈骨神経溝", "bone": "上腕骨", "cat": "上肢"}, {"part": "内側上顆", "bone": "上腕骨", "cat": "上肢"}, {"part": "上腕骨滑車", "bone": "上腕骨", "cat": "上肢"}, {"part": "上腕骨小頭", "bone": "上腕骨", "cat": "上肢"}, {"part": "尺骨神経溝", "bone": "上腕骨", "cat": "上肢"}, {"part": "肘頭窩", "bone": "上腕骨", "cat": "上肢"}, {"part": "橈骨窩", "bone": "上腕骨", "cat": "上肢"}, {"part": "鈎突窩", "bone": "上腕骨", "cat": "上肢"}, {"part": "橈骨頭", "bone": "橈骨", "cat": "上肢"}, {"part": "関節環状面", "bone": "橈骨", "cat": "上肢"}, {"part": "橈骨頸", "bone": "橈骨", "cat": "上肢"}, {"part": "橈骨粗面", "bone": "橈骨", "cat": "上肢"}, {"part": "尺骨切痕", "bone": "橈骨", "cat": "上肢"}, {"part": "背側結節", "bone": "橈骨", "cat": "上肢"}, {"part": "肘頭", "bone": "尺骨", "cat": "上肢"}, {"part": "滑車切痕", "bone": "尺骨", "cat": "上肢"}, {"part": "鉤状突起", "bone": "尺骨", "cat": "上肢"}, {"part": "橈骨切痕", "bone": "尺骨", "cat": "上肢"}, {"part": "尺骨粗面", "bone": "尺骨", "cat": "上肢"}, {"part": "尺骨頭", "bone": "尺骨", "cat": "上肢"}, {"part": "関節環状面", "bone": "尺骨", "cat": "上肢"}, {"part": "茎状突起", "bone": "尺骨", "cat": "上肢"}, {"part": "寛骨臼", "bone": "寛骨", "cat": "下肢"}, {"part": "月状面", "bone": "寛骨", "cat": "下肢"}, {"part": "寛骨臼切痕", "bone": "寛骨", "cat": "下肢"}, {"part": "閉鎖孔", "bone": "寛骨", "cat": "下肢"}, {"part": "恥骨上枝", "bone": "寛骨", "cat": "下肢"}, {"part": "恥骨下枝", "bone": "寛骨", "cat": "下肢"}, {"part": "恥骨結節", "bone": "寛骨", "cat": "下肢"}, {"part": "恥骨結合面", "bone": "寛骨", "cat": "下肢"}, {"part": "弓状線", "bone": "寛骨", "cat": "下肢"}, {"part": "腸恥隆起", "bone": "寛骨", "cat": "下肢"}, {"part": "腸骨翼", "bone": "寛骨", "cat": "下肢"}, {"part": "腸骨窩", "bone": "寛骨", "cat": "下肢"}, {"part": "耳状面", "bone": "寛骨", "cat": "下肢"}, {"part": "腸骨稜", "bone": "寛骨", "cat": "下肢"}, {"part": "上前腸骨棘", "bone": "寛骨", "cat": "下肢"}, {"part": "下前腸骨棘", "bone": "寛骨", "cat": "下肢"}, {"part": "腸骨結節", "bone": "寛骨", "cat": "下肢"}, {"part": "下後腸骨棘", "bone": "寛骨", "cat": "下肢"}, {"part": "坐骨枝", "bone": "寛骨", "cat": "下肢"}, {"part": "坐骨棘", "bone": "寛骨", "cat": "下肢"}, {"part": "坐骨結節", "bone": "寛骨", "cat": "下肢"}, {"part": "大坐骨切痕", "bone": "寛骨", "cat": "下肢"}, {"part": "仙骨尖", "bone": "仙骨", "cat": "下肢"}, {"part": "大腿骨頭", "bone": "大腿骨", "cat": "下肢"}, {"part": "大転子", "bone": "大腿骨", "cat": "下肢"}, {"part": "小転子", "bone": "大腿骨", "cat": "下肢"}, {"part": "転子間線", "bone": "大腿骨", "cat": "下肢"}, {"part": "転子間稜", "bone": "大腿骨", "cat": "下肢"}, {"part": "大腿骨頭窩", "bone": "大腿骨", "cat": "下肢"}, {"part": "顆間窩", "bone": "大腿骨", "cat": "下肢"}, {"part": "膝蓋面", "bone": "大腿骨", "cat": "下肢"}, {"part": "外側上顆", "bone": "大腿骨", "cat": "下肢"}, {"part": "粗線", "bone": "大腿骨", "cat": "下肢"}, {"part": "外側顆", "bone": "大腿骨", "cat": "下肢"}, {"part": "殿筋粗面", "bone": "大腿骨", "cat": "下肢"}, {"part": "恥骨筋粗線", "bone": "大腿骨", "cat": "下肢"}, {"part": "腓骨関節面", "bone": "脛骨", "cat": "下肢"}, {"part": "内側顆", "bone": "脛骨", "cat": "下肢"}, {"part": "外側顆", "bone": "脛骨", "cat": "下肢"}, {"part": "顆間隆起", "bone": "脛骨", "cat": "下肢"}, {"part": "腓骨切痕", "bone": "脛骨", "cat": "下肢"}, {"part": "内果", "bone": "脛骨", "cat": "下肢"}, {"part": "ヒラメ筋線", "bone": "脛骨", "cat": "下肢"}, {"part": "腓骨頭", "bone": "腓骨", "cat": "下肢"}, {"part": "腓骨頭関節面", "bone": "腓骨", "cat": "下肢"}, {"part": "外果関節面", "bone": "腓骨", "cat": "下肢"}, {"part": "前弓", "bone": "第一頚椎", "cat": "脊柱"}, {"part": "後弓", "bone": "第一頚椎", "cat": "脊柱"}, {"part": "前結節", "bone": "第一頚椎", "cat": "脊柱"}, {"part": "後結節", "bone": "第一頚椎", "cat": "脊柱"}, {"part": "椎孔", "bone": "第一頚椎", "cat": "脊柱"}, {"part": "横突起", "bone": "第一頚椎", "cat": "脊柱"}, {"part": "横突孔", "bone": "第一頚椎", "cat": "脊柱"}, {"part": "上(下)関節面", "bone": "第一頚椎", "cat": "脊柱"}, {"part": "歯突起", "bone": "第二頚椎", "cat": "脊柱"}, {"part": "棘突起", "bone": "第二頚椎", "cat": "脊柱"}, {"part": "横突起", "bone": "第二頚椎", "cat": "脊柱"}, {"part": "横突孔", "bone": "第二頚椎", "cat": "脊柱"}, {"part": "椎弓", "bone": "第二頚椎", "cat": "脊柱"}, {"part": "椎孔", "bone": "第二頚椎", "cat": "脊柱"}, {"part": "上(下)関節面", "bone": "第二頚椎", "cat": "脊柱"}, {"part": "椎体", "bone": "第四頚椎", "cat": "脊柱"}, {"part": "椎弓", "bone": "第四頚椎", "cat": "脊柱"}, {"part": "椎孔", "bone": "第四頚椎", "cat": "脊柱"}, {"part": "椎弓根", "bone": "第四頚椎", "cat": "脊柱"}, {"part": "横突起", "bone": "第四頚椎", "cat": "脊柱"}, {"part": "横突孔", "bone": "第四頚椎", "cat": "脊柱"}, {"part": "棘突起", "bone": "第四頚椎", "cat": "脊柱"}, {"part": "鉤状突起", "bone": "第四頚椎", "cat": "脊柱"}, {"part": "上(下)関節面", "bone": "第四頚椎", "cat": "脊柱"}, {"part": "椎体", "bone": "第六胸椎", "cat": "脊柱"}, {"part": "横突肋骨窩", "bone": "第六胸椎", "cat": "脊柱"}, {"part": "椎弓", "bone": "第六胸椎", "cat": "脊柱"}, {"part": "椎孔", "bone": "第六胸椎", "cat": "脊柱"}, {"part": "横突起", "bone": "第六胸椎", "cat": "脊柱"}, {"part": "棘突起", "bone": "第六胸椎", "cat": "脊柱"}, {"part": "上(下)関節突起", "bone": "第六胸椎", "cat": "脊柱"}, {"part": "肋骨窩", "bone": "第六胸椎", "cat": "脊柱"}, {"part": "椎体", "bone": "第三腰椎", "cat": "脊柱"}, {"part": "椎弓", "bone": "第三腰椎", "cat": "脊柱"}, {"part": "椎孔", "bone": "第三腰椎", "cat": "脊柱"}, {"part": "肋骨突起", "bone": "第三腰椎", "cat": "脊柱"}, {"part": "棘突起", "bone": "第三腰椎", "cat": "脊柱"}, {"part": "上(下)関節突起", "bone": "第三腰椎", "cat": "脊柱"}, {"part": "乳頭突起", "bone": "第三腰椎", "cat": "脊柱"}, {"part": "前頭鱗", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "オトガイ隆起", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "眼窩", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "眼窩下孔", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "上眼窩裂", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "下眼窩裂", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "下顎体", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "下顎枝", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "オトガイ孔", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "頬骨弓", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "外耳道", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "乳様突起", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "下顎角", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "咬筋粗面", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "下顎骨関節突起", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "鱗状縫合", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "蝶鱗縫合", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "蝶頭頂縫合", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "蝶前頭縫合", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "冠状縫合", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "矢状縫合", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "ラムダ縫合", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "外後頭隆起", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "上項線", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "下項線", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "オトガイ棘", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "大(後頭)孔", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "蝶形骨小翼", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "篩骨の篩板", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "下垂体窩(トルコ鞍)", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "鞍背", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "斜台", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "正円孔", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "視神経管", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "卵円孔", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "破裂孔", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "棘孔", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "頚静脈孔", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "内耳孔", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "横洞溝", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "S状洞溝", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "内後頭隆起", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "舌下神経管", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "後頭顆", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "後鼻孔", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "頚動脈管外口", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "茎状突起", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "乳様突起", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "外後頭稜", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "翼状突起(外側板・内側板)", "bone": "頭蓋骨", "cat": "頭蓋骨"}, {"part": "豆状骨", "bone": "手根骨", "cat": "手根・足根骨"}, {"part": "三角骨", "bone": "手根骨", "cat": "手根・足根骨"}, {"part": "月状骨", "bone": "手根骨", "cat": "手根・足根骨"}, {"part": "舟状骨", "bone": "手根骨", "cat": "手根・足根骨"}, {"part": "大菱形骨", "bone": "手根骨", "cat": "手根・足根骨"}, {"part": "小菱形骨", "bone": "手根骨", "cat": "手根・足根骨"}, {"part": "有頭骨", "bone": "手根骨", "cat": "手根・足根骨"}, {"part": "有鈎骨", "bone": "手根骨", "cat": "手根・足根骨"}, {"part": "距骨頭", "bone": "足根骨", "cat": "手根・足根骨"}, {"part": "距骨滑車", "bone": "足根骨", "cat": "手根・足根骨"}, {"part": "距骨溝", "bone": "足根骨", "cat": "手根・足根骨"}, {"part": "踵骨隆起", "bone": "足根骨", "cat": "手根・足根骨"}, {"part": "立方関節面", "bone": "足根骨", "cat": "手根・足根骨"}, {"part": "載距突起", "bone": "足根骨", "cat": "手根・足根骨"}, {"part": "舟状骨", "bone": "足根骨", "cat": "手根・足根骨"}, {"part": "立方骨", "bone": "足根骨", "cat": "手根・足根骨"}, {"part": "内側楔状骨", "bone": "足根骨", "cat": "手根・足根骨"}, {"part": "中間楔状骨", "bone": "足根骨", "cat": "手根・足根骨"}, {"part": "外側楔状骨", "bone": "足根骨", "cat": "手根・足根骨"}, {"part": "肋骨頭", "bone": "肋骨", "cat": "手根・足根骨"}, {"part": "肋骨体", "bone": "肋骨", "cat": "手根・足根骨"}, {"part": "胸骨柄", "bone": "胸骨", "cat": "手根・足根骨"}, {"part": "胸骨体", "bone": "胸骨", "cat": "手根・足根骨"}, {"part": "剣状突起", "bone": "胸骨", "cat": "手根・足根骨"}, {"part": "頚切痕", "bone": "胸骨", "cat": "手根・足根骨"}];
-
+ 
 const CATEGORIES = ['上肢','下肢','脊柱','頭蓋骨','手根・足根骨','すべての領域'];
 const CAT_ICONS  = {'上肢':'💪','下肢':'🦵','脊柱':'🏗️','頭蓋骨':'💀','手根・足根骨':'🖐️','すべての領域':'🦴'};
-
+ 
 let selectedCat = 'すべての領域';
+let selectedNum = 10;
 let questions = [], idx = 0, cCount = 0, wCount = 0, answers = [];
-
+ 
 // ── build category grid ──
 function buildCatGrid() {
   const data = SAMPLE;
@@ -454,16 +478,33 @@ function buildCatGrid() {
       <span class="cat-count">${n}問</span>
     </button>`;
   }).join('');
+  buildNumGrid();
   updateStartBtn();
 }
-
+ 
+function buildNumGrid() {
+  const nums = [10,15,20,25,30];
+  document.getElementById('num-grid').innerHTML = nums.map(n =>
+    `<button class="num-btn${n===selectedNum?' selected':''}" onclick="selectNum(${n})" data-num="${n}">
+      <span class="num-val">${n}</span>
+      <span class="num-unit">問</span>
+    </button>`
+  ).join('');
+}
+ 
+function selectNum(n) {
+  selectedNum = n;
+  document.querySelectorAll('.num-btn').forEach(b => b.classList.toggle('selected', parseInt(b.dataset.num)===n));
+  updateStartBtn();
+}
+ 
 function selectCat(c) {
   c = c.replace(/_DOT_/g,'・');
   selectedCat = c;
   document.querySelectorAll('.cat-btn').forEach(b => b.classList.toggle('selected', b.dataset.cat===c));
   updateStartBtn();
 }
-
+ 
 function updateStartBtn() {
   const data = SAMPLE;
   const pool = selectedCat==='すべての領域' ? data : data.filter(d=>d.cat===selectedCat);
@@ -473,11 +514,11 @@ function updateStartBtn() {
     btn.textContent = '⚠️ このカテゴリにデータがありません';
   } else {
     btn.disabled = false;
-    btn.textContent = `🦴 クイズを始める（${pool.length}問中10問）`;
+    btn.textContent = `🦴 クイズを始める（${selectedNum}問）`;
   }
 }
-
-
+ 
+ 
 // ── quiz logic ──
 function shuffle(a) {
   const arr=[...a];
@@ -490,14 +531,15 @@ function showPanel(id) {
 }
 function startQuiz() {
   const data = SAMPLE;
+  const perCat = Math.ceil(selectedNum / 5); // すべての領域用：カテゴリごとの問題数
   if (selectedCat === 'すべての領域') {
-    // 各カテゴリからランダムに2問ずつ、合計10問
     const cats = ['上肢','下肢','脊柱','頭蓋骨','手根・足根骨'];
-    questions = cats.flatMap(c => shuffle(data.filter(d=>d.cat===c)).slice(0,2));
-    questions = shuffle(questions);
+    // 各カテゴリから均等に取り、合計selectedNum問になるよう調整
+    let pool = cats.flatMap(c => shuffle(data.filter(d=>d.cat===c)).slice(0,perCat));
+    questions = shuffle(pool).slice(0, selectedNum);
   } else {
     const pool = data.filter(d=>d.cat===selectedCat);
-    questions = shuffle(pool).slice(0,Math.min(10,pool.length));
+    questions = shuffle(pool).slice(0, Math.min(selectedNum, pool.length));
   }
   idx=0; cCount=0; wCount=0; answers=[];
   showPanel('panel-quiz');
@@ -567,14 +609,15 @@ function showResult() {
   document.getElementById('prog-fill').style.width='100%';
 }
 function resetAll() {
-  selectedCat='すべての領域';
+  selectedCat='すべての領域'; selectedNum=10;
   buildCatGrid();
   showPanel('panel-start');
 }
-
+ 
 // init
 buildCatGrid();
-
+buildNumGrid();
+ 
 // re-attach upload after potential DOM manipulation
 document.getElementById('cat-grid').addEventListener('click', e => {
   const btn = e.target.closest('.cat-btn');
